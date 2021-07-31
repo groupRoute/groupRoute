@@ -20,3 +20,11 @@ export type TabOneParamList = {
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
 };
+
+export type HomeParamList = {
+  HomeScreen: undefined;
+};
+
+export type SettingsParamList = {
+  SettingsScreen: undefined;
+};
