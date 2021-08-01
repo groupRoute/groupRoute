@@ -33,15 +33,15 @@ export default function BottomTabNavigator() {
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
-        name="Home"
+        name="Map"
         component={HomeScreenNavigator}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="home-outline" color={color} />
+            <TabBarIcon name="map-outline" color={color} />
           ),
         }}
       />
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="Settings"
         component={SettingsScreenNavigator}
         options={{
@@ -49,7 +49,7 @@ export default function BottomTabNavigator() {
             <TabBarIcon name="settings-outline" color={color} />
           ),
         }}
-      />
+      /> */}
     </BottomTab.Navigator>
   );
 }
@@ -71,7 +71,7 @@ function HomeScreenNavigator() {
   return (
     <HomeScreenStack.Navigator>
       <HomeScreenStack.Screen
-        name="HomeScreen"
+        name="mapScreen"
         component={homeScreen}
         options={{ headerTitle: "groupRoute" }}
       />

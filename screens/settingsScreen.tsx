@@ -13,7 +13,7 @@ export default function settingsScreen() {
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <EditScreenInfo path="/screens/settingsScreen.tsx" />
     </View>
   );
 }
