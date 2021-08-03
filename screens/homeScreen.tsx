@@ -12,17 +12,7 @@ export default function TabOneScreen() {
         style={styles.map}
         showsUserLocation={true}
         followsUserLocation={true}
-      >
-        {/* {this.state.markers.map((marker, index) => (
-          <Marker
-            key={index}
-            coordinate={marker.latlng}
-            title={marker.title}
-            description={marker.description}
-          />
-        ))} */}
-      </MapView>
-      {/* <MapView style={styles.map} /> */}
+      />
       <SafeAreaView
         style={styles.separator}
         lightColor="#eee"
