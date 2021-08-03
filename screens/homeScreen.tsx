@@ -10,12 +10,8 @@ export default function TabOneScreen() {
       <Text style={styles.title}>groupRoute Map</Text>
       <MapView
         style={styles.map}
-        initialRegion={{
-          latitude: 51.5269,
-          longitude: -0.1263,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
-        }}
+        showsUserLocation={true}
+        followsUserLocation={true}
       >
         {/* {this.state.markers.map((marker, index) => (
           <Marker
