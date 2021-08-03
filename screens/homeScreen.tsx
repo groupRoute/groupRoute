@@ -1,12 +1,12 @@
 import * as React from "react";
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions, SafeAreaView } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 
 export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>groupRoute Map</Text>
       <MapView
         style={styles.map}
@@ -23,13 +23,13 @@ export default function TabOneScreen() {
         ))} */}
       </MapView>
       {/* <MapView style={styles.map} /> */}
-      <View
+      <SafeAreaView
         style={styles.separator}
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
       <EditScreenInfo path="/screens/homeScreen.tsx" />
-    </View>
+    </SafeAreaView>
   );
 }
 
