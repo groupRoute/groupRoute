@@ -26,6 +26,8 @@ export default function TabOneScreen() {
       />
       <SafeAreaView style={styles.underMap}>
        <Text style={styles.baseText}>focus on your location</Text>
+       <Text>focus on your location</Text>
+
       <Switch
         trackColor={{ false: "red", true: "green" }}
         ios_backgroundColor="red"
