@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as firebaseDB from "../components/firebase"
 import { useState } from "react";
 import { StyleSheet, Dimensions, SafeAreaView, Switch} from "react-native";
 import MapView from "react-native-maps";
@@ -8,6 +9,7 @@ var toggleLock = false
 
 export default function TabOneScreen() {
   const [isEnabled, setIsEnabled] = useState(false);
+  // const score = firebaseDB.createNewGroup();
   const toggleSwitch = () => {
     setIsEnabled(previousState => !previousState);
     toggleLock=!toggleLock;
