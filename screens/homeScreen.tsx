@@ -1,11 +1,8 @@
 import * as React from "react";
-import { Component , useState} from "react";
+import { useState } from "react";
 import { StyleSheet, Dimensions, SafeAreaView, Switch} from "react-native";
-import { State } from "react-native-gesture-handler";
-import MapView, { Marker } from "react-native-maps";
-import { Value } from "react-native-reanimated";
-import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
+import MapView from "react-native-maps";
+import { Text } from "../components/Themed";
 
 var toggleLock = false
 
