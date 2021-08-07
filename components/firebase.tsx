@@ -1,6 +1,19 @@
 import firebase from "firebase";
 
-function createNewGroup(destination, users) {
+function loginUser() {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(
+      "samuel.mashil@yahoo.co.uk",
+      "randompassword"
+    )
+    .then((res) => {
+      // console.log(res);
+    });
+  // console.log(firebase.auth().currentUser);
+}
+
+function createNewGroup(lat, long, users) {
   firebase
     .database()
     .ref("groups/")
@@ -16,6 +29,9 @@ function createNewGroup(destination, users) {
     });
 }
 
-function updateUserLocation() {}
+// WORK IN PROGRESS :)
+// function updateUserLocation() {
+//   firebase.database().ref("users/");
+// }
 
-export { createNewGroup, updateUserLocation };
+export { loginUser, createNewGroup };
