@@ -37,7 +37,8 @@
     "react-native-screens": "~3.4.0",
     "react-native-web": "^0.17.1",
     "react-native-windows": "^0.64.14",
-    "firebase": "8.2.3"
+    "firebase": "8.2.3",
+    "expo-location": "~12.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
