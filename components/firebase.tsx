@@ -3,10 +3,7 @@ import firebase from "firebase";
 function loginUser() {
   firebase
     .auth()
-    .signInWithEmailAndPassword(
-      "samuel.mashil@yahoo.co.uk",
-      "randompassword"
-    )
+    .signInWithEmailAndPassword("samuel.mashil@yahoo.co.uk", "randompassword") // I'll add the proper login function stuff at some point so ignore the random email and password thats there for now - Sam :)
     .then((res) => {
       // console.log(res);
     });
