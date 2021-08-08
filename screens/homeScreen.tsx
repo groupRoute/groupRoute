@@ -1,20 +1,20 @@
 import * as React from "react";
-import * as firebaseDB from "../components/firebase"
+import * as firebaseDB from "../components/firebase";
 import { useState } from "react";
-import { StyleSheet, Dimensions, SafeAreaView, Switch} from "react-native";
+import { StyleSheet, Dimensions, SafeAreaView, Switch } from "react-native";
 import MapView from "react-native-maps";
 import { Text } from "../components/Themed";
 
-var toggleLock = false
+var toggleLock = false;
 
-export default function TabOneScreen() {
+export default function homeScreen() {
   const [isEnabled, setIsEnabled] = useState(false);
   // const score = firebaseDB.createNewGroup();
   const toggleSwitch = () => {
-    setIsEnabled(previousState => !previousState);
-    toggleLock=!toggleLock;
+    setIsEnabled((previousState) => !previousState);
+    toggleLock = !toggleLock;
     console.log(toggleLock);
-  }
+  };
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>groupRoute Map</Text>
@@ -24,13 +24,13 @@ export default function TabOneScreen() {
         followsUserLocation={toggleLock}
       />
       <SafeAreaView style={styles.underMap}>
-       <Text>focus on your location</Text>
-      <Switch
-        trackColor={{ false: "red", true: "green" }}
-        ios_backgroundColor="red"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      /> 
+        <Text>focus on your location</Text>
+        <Switch
+          trackColor={{ false: "red", true: "green" }}
+          ios_backgroundColor="red"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
       </SafeAreaView>
     </SafeAreaView>
   );
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     height: "80%",
   },
-  underMap:{
+  underMap: {
     width: Dimensions.get("window").width,
     alignItems: "center",
   },

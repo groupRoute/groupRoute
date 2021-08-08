@@ -10,7 +10,7 @@ function loginUser() {
   // console.log(firebase.auth().currentUser);
 }
 
-function createNewGroup(lat, long, users) {
+function createNewGroup(lat: Number, long: Number, users: String[]) {
   firebase
     .database()
     .ref("groups/")

@@ -10,17 +10,10 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import TabOneScreen from "../screens/TabOneScreen";
-import TabTwoScreen from "../screens/TabTwoScreen";
 import homeScreen from "../screens/homeScreen";
 import settingsScreen from "../screens/settingsScreen";
-import {
-  BottomTabParamList,
-  TabOneParamList,
-  TabTwoParamList,
-  HomeParamList,
-  SettingsParamList,
-} from "../types";
+import loginScreen from "../screens/loginScreen";
+import { BottomTabParamList, HomeParamList, SettingsParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -29,7 +22,7 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="HomeScreen"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}
     >
       <BottomTab.Screen
@@ -41,15 +34,15 @@ export default function BottomTabNavigator() {
           ),
         }}
       />
-      {/* <BottomTab.Screen
-        name="Settings"
-        component={SettingsScreenNavigator}
+      <BottomTab.Screen
+        name="Login (testing)"
+        component={loginScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <TabBarIcon name="settings-outline" color={color} />
+            <TabBarIcon name="map-outline" color={color} />
           ),
         }}
-      /> */}
+      />
     </BottomTab.Navigator>
   );
 }
