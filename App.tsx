@@ -8,24 +8,21 @@ import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 import firebase from "firebase/app";
 import * as Location from "expo-location";
-import { loginUser } from "./components/firebase";
 import firebaseConfig from "./constants/firebaseConfig";
 
 var uid;
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
-}
+!firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     uid = user.uid;
-    console.log(uid);
+    console.log("Logged In as user: " + uid);
     // ...
+  } else {
+    console.log("Logged Out");
   }
 });
 
@@ -43,7 +40,7 @@ export default function App() {
     return (
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
-        <StatusBar />
+        <StatusBar style="light" />
       </SafeAreaProvider>
     );
   }

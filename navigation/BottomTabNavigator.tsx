@@ -35,7 +35,7 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="Login (testing)"
+        name="Login"
         component={loginScreen}
         options={{
           tabBarIcon: ({ color }) => (
